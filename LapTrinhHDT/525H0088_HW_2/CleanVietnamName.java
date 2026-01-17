@@ -1,7 +1,7 @@
 public class CleanVietnamName {
 
     public static void main(String[] args) {
-        String input = "   nGuyen   vAN    aN   ";
+        String input = "   huYNh      HAi  quAn";
         System.out.println("Original: '" + input + "'");
         System.out.println("Cleaned:  '" + cleanName(input) + "'");
     }

@@ -19,7 +19,7 @@ public class MergeArray {
         long endTime = System.nanoTime();
         long durationConcat = endTime - startTime;
 
-        System.out.println("Standard Concatenation (+): " + durationConcat + " ns");
+        System.out.println("Standard Concatenation: " + durationConcat + " ns");
 
         startTime = System.nanoTime();
         StringBuilder sb = new StringBuilder();
@@ -30,8 +30,14 @@ public class MergeArray {
         endTime = System.nanoTime();
         long durationBuilder = endTime - startTime;
 
-        System.out.println("StringBuilder (.append):    " + durationBuilder + " ns");
+        System.out.println("StringBuilder: " + durationBuilder + " ns");
         
-        System.out.println("\nPerformance Ratio: StringBuilder is roughly " + (durationConcat / durationBuilder) + " times faster.");
+        System.out.println("Performance Ratio: StringBuilder is roughly " + (durationConcat / durationBuilder) + " times faster.");
+
+        System.out.println("Explaination:");
+        System.out.println("The StringBuilder is faster due to it mutability.");
+        System.out.println("String is immutable: it creates 10,000 new objects in memory.");
+        System.out.println("StringBuilder is mutable: it uses one buffer, saving time and memory.");
+
     }
 }
