@@ -1,15 +1,20 @@
 import java.math.BigDecimal;
+import java.util.Scanner;
 
 public class BigDecimalMax {
 
     public static void main(String[] args) {
-        BigDecimal[] numbers = {
-            new BigDecimal("120.55"),
-            new BigDecimal("89.99"),
-            new BigDecimal("500.25"),
-            new BigDecimal("500.24"), 
-            new BigDecimal("5.0")
-        };
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the size of the Big Decimal array:");
+        int n = sc.nextInt();
+        BigDecimal[] numbers = new BigDecimal[n];
+        System.out.println("Enter the values of the Big Decimal:");
+        for (int i = 0; i < n; i++) {
+            System.out.print("Big Decimal " + (i + 1) + ": ");
+            numbers[i] = sc.nextBigDecimal();
+        }
+
+        sc.close();
 
         BigDecimal result = findMax(numbers);
         System.out.println("The maximum value is: " + result);
