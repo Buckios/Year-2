@@ -8,8 +8,7 @@ public class SplitWords {
         String input = sc.nextLine();
 
         String[] result = splitByComma(input);
-
- 
+        System.out.println("Split items: " + Arrays.toString(result));
 
         sc.close();
     }
