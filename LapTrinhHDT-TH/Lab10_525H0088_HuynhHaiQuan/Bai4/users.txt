@@ -1,0 +1,2 @@
+admin,admin123,ADMIN,Administrator,1990-01-01
+12345,pass,STUDENT,Huynh Hai Quan,2007-24-02
